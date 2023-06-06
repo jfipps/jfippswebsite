@@ -1,0 +1,22 @@
+:root {
+}
+
+/* reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.HeroSection {
+  width: 100vw;
+  height: 100vh;
+  background-color: cadetblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.HeroSection h1 {
+  color: #fff;
+}
