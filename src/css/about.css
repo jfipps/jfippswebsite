@@ -1,6 +1,20 @@
 .AboutSection {
   display: flex;
-  height: 200%;
+  height: 100%;
   width: 100%;
   background-color: #fff;
+}
+
+.AboutContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  padding-top: 5rem;
+}
+
+.AboutContent span {
+  font-size: 3rem;
+  font-weight: bold;
 }
