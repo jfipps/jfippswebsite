@@ -3,7 +3,7 @@ import "../css/about.css";
 
 export default function About(props) {
   return (
-    <section className="AboutSection">
+    <section className="AboutSection" id="about">
       <div>This is a test</div>
     </section>
   );
