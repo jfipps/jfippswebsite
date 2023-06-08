@@ -1,0 +1,26 @@
+.NavBar {
+  display: flex;
+  height: 5%;
+  width: 100%;
+  background-color: black;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 100;
+}
+.NavLinks {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 1rem;
+  list-style: none;
+}
+
+.NavLinks li {
+  padding-left: 0.5rem;
+}
+
+.NavBar span {
+  font-size: 1.5rem;
+  color: #fff;
+}

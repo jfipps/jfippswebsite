@@ -8,15 +8,15 @@
   box-sizing: border-box;
 }
 
+#tsparticles {
+  z-index: -10;
+}
+
 .HeroSection {
-  width: 100vw;
-  height: 100vh;
-  background-color: cadetblue;
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.HeroSection h1 {
   color: #fff;
 }
