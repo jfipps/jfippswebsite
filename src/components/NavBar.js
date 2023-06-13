@@ -10,19 +10,19 @@ export default function NavBar(props) {
       <nav ref={stickyRef} className={classNames("nav", { sticky })}>
         <ul className="NavLinks">
           <li>
-            <span>Home</span>
+            <a>Home</a>
           </li>
           <li>
-            <span>About</span>
+            <a href="#about">About</a>
           </li>
           <li>
-            <span>Skills</span>
+            <a href="#skills">Skills</a>
           </li>
           <li>
-            <span>Projects</span>
+            <a href="#projects">Projects</a>
           </li>
           <li>
-            <span>Contacts</span>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
       </nav>
