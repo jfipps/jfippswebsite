@@ -52,19 +52,30 @@
 
 .ProjectCard {
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   width: 25%;
   height: 60%;
   border-top: 5px solid var(--background-color);
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6);
-  background: linear-gradient(to bottom, var(--background-color) 50%, #fff 50%)
-    bottom;
-  background-size: 100% 200%;
-  transition: 0.5s ease-out;
 }
 
-.ProjectCard:hover {
-  color: white;
-  background-position: top;
+.ProjectCard p {
+  padding-top: 1rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  line-height: 150%;
+}
+
+.ExpandIcon {
+  position: absolute;
+  background-color: #ffffff;
+  top: 2rem;
+  right: 2rem;
+}
+
+button {
+  border: none;
+  background-color: #ffffff;
 }

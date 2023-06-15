@@ -1,4 +1,6 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { RxOpenInNewWindow } from "react-icons/rx";
 import "../css/projects.css";
 
 export default function Projects(props) {
@@ -9,6 +11,15 @@ export default function Projects(props) {
       </div>
       <div className="ProjectsContent">
         <div className="ProjectCard">
+          <div className="ExpandIcon">
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.85 }}
+              onClick={() => null}
+            >
+              <RxOpenInNewWindow size={28}></RxOpenInNewWindow>
+            </motion.button>
+          </div>
           <h2 className="ProjectCardHeader">Spoofy</h2>
           <p>
             Spoofy is a web application that allows a user to track their
@@ -20,6 +31,15 @@ export default function Projects(props) {
           </p>
         </div>
         <div className="ProjectCard">
+          <div className="ExpandIcon">
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.85 }}
+              onClick={() => null}
+            >
+              <RxOpenInNewWindow size={28}></RxOpenInNewWindow>
+            </motion.button>
+          </div>
           <h2 className="ProjectCardHeader">Quizmo</h2>
           <p>
             Spoofy is a web application in which a user can take multiple choice

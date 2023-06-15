@@ -5,7 +5,7 @@
   --modal-background-hover-color: #5b6870;
   --modal-text: #c09576;
   --button-background-color: #1f313d;
-  --alt-plain-background: #f4f4f4;
+  --plain-background: #ffffff;
 }
 
 /* reset */
@@ -22,7 +22,7 @@
   align-items: center;
   height: 70%;
   width: 100%;
-  background-color: var(--alt-plain-background);
+  background-color: var(--plain-background);
   border: 1px solid red;
 }
 
