@@ -48,7 +48,7 @@ export default function Skills(props) {
         </div>
         <div className="SkillCard">
           <img src={MongoIcon} alt="mongo" />
-          <h2>Mongo</h2>
+          <h2>MongoDB</h2>
         </div>
       </div>
     </section>
