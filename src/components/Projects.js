@@ -6,6 +6,16 @@ import "../css/projects.css";
 
 export default function Projects(props) {
   const [modalOpen, setModalOpen] = useState(false);
+  const [currentModal, setCurrentModal] = useState("");
+
+  const handleButtonClick = (cardName) => {
+    if (!modalOpen) {
+      setCurrentModal(cardName);
+    } else {
+      setCurrentModal("");
+    }
+    setModalOpen(!modalOpen);
+  };
 
   const close = () => {
     setModalOpen(false);
@@ -14,36 +24,18 @@ export default function Projects(props) {
     setModalOpen(true);
   };
 
-  const modalAnimation = {
-    open: {
-      width: "60%",
-      height: "100%",
-      left: "10%",
-      bottom: "10%",
-      z: "1000",
-    },
-    close: {
-      width: "25%",
-      height: "60%",
-    },
-  };
-
   return (
     <section className="ProjectsSection" id="projects">
       <div className="ProjectsTitle">
         <span>Projects</span>
       </div>
       <div className="ProjectsContent">
-        {/* <motion.div
-          className="ProjectCard"
-          animate={modalOpen ? "open" : "close"}
-          variants={modalAnimation}
-        >
+        <div className="ProjectCard">
           <div className="ExpandIcon">
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.85 }}
-              onClick={() => setModalOpen(!modalOpen)}
+              onClick={() => handleButtonClick("Spoofy")}
             >
               <RxOpenInNewWindow size={28}></RxOpenInNewWindow>
             </motion.button>
@@ -57,14 +49,14 @@ export default function Projects(props) {
             Express/NodeJS back end. The Spotify API is used to pull the user
             data.
           </p>
-        </motion.div> */}
+        </div>
         <div className="ProjectCard">
           <div className="ExpandIcon">
             <a href="#projects">
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.85 }}
-                onClick={() => (modalOpen ? close() : open())}
+                onClick={() => handleButtonClick("Quizmo")}
               >
                 <RxOpenInNewWindow size={28}></RxOpenInNewWindow>
               </motion.button>
@@ -82,7 +74,13 @@ export default function Projects(props) {
           </p>
         </div>
       </div>
-      {modalOpen && <Modal modalOpen={modalOpen} handleClose={close}></Modal>}
+      {modalOpen && (
+        <Modal
+          modalOpen={modalOpen}
+          handleClose={close}
+          openedModal={currentModal}
+        ></Modal>
+      )}
     </section>
   );
 }
