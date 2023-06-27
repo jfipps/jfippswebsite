@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Backdrop from "./Backdrop";
 import CarouselItem from "./CarouselItem";
+import { RxDot, RxDotFilled, RxCaretRight, RxCaretLeft } from "react-icons/rx";
+import { RiCloseFill } from "react-icons/ri";
 import { motion } from "framer-motion";
 import "../css/modal.css";
 import Spoofy1 from "../resources/Spoofy1.png";
@@ -54,44 +56,63 @@ export default function Modal({ handleClose, openedModal }) {
         onClick={(e) => {
           e.stopPropagation();
         }}
-        className="modal"
+        className="Modal"
         variants={dropIn}
         initial="hidden"
         animate="visible"
         exit="exit"
       >
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.85 }}
+          onClick={handleClose}
+          className="CloseButton"
+        >
+          <RiCloseFill className="ModalIcon" size={32}></RiCloseFill>
+        </motion.button>
         <h2>{openedModal}</h2>
         <p>{openedModal === "Spoofy" ? SpoofyDesc : QuizmoDesc}</p>
-        <div className="Carousel">
-          <div
-            className="Inner"
-            style={{ transform: `translate(-${activeIndex * 100}%)` }}
+        <div className="CarouselNav">
+          <motion.button
+            whileTap={{ scale: 0.85 }}
+            onClick={() => HandleNav(activeIndex - 1)}
+            className={activeIndex <= 0 ? "Invis" : "Vis"}
           >
-            {openedModal === "Spoofy" && (
-              <div>
-                {SpoofyImages.map((image) => {
-                  return (
-                    <CarouselItem image={image} width={"100%"}></CarouselItem>
-                  );
-                })}
-              </div>
-            )}
-            {openedModal === "Quizmo" && (
-              <div>
-                {QuizmoImages.map((image) => {
-                  return (
-                    <CarouselItem image={image} width={"100%"}></CarouselItem>
-                  );
-                })}
-              </div>
-            )}
+            <RxCaretLeft className="ModalIcon" size={42}></RxCaretLeft>
+          </motion.button>
+          <div className="Carousel">
+            <div
+              className="Inner"
+              style={{ transform: `translate(-${activeIndex * 100}%)` }}
+            >
+              {openedModal === "Spoofy" && (
+                <div>
+                  {SpoofyImages.map((image) => {
+                    return (
+                      <CarouselItem image={image} width={"100%"}></CarouselItem>
+                    );
+                  })}
+                </div>
+              )}
+              {openedModal === "Quizmo" && (
+                <div>
+                  {QuizmoImages.map((image) => {
+                    return (
+                      <CarouselItem image={image} width={"100%"}></CarouselItem>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
           </div>
+          <motion.button
+            whileTap={{ scale: 0.85 }}
+            onClick={() => HandleNav(activeIndex + 1)}
+            className={activeIndex + 1 >= SpoofyImages.length ? "Invis" : "Vis"}
+          >
+            <RxCaretRight className="ModalIcon" size={42}></RxCaretRight>
+          </motion.button>
         </div>
-        <div className="NavigationButtons">
-          <button onClick={() => HandleNav(activeIndex - 1)}>Left</button>
-          <button onClick={() => HandleNav(activeIndex + 1)}>Right</button>
-        </div>
-        <button onClick={handleClose}>Close</button>
       </motion.div>
     </Backdrop>
   );
