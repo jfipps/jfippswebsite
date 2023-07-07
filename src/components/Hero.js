@@ -5,7 +5,7 @@ import "../css/hero.css";
 
 export default function Hero(props) {
   return (
-    <section className="HeroSection">
+    <section className="HeroSection" id="home">
       <Particle />
       <div className="HeroContent">
         <div className="HeroDesc">

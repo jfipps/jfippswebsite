@@ -28,11 +28,11 @@
 .ProjectsTitle {
   display: flex;
   flex-direction: column;
-  height: 15%;
+  height: 10%;
   width: 100%;
   align-items: center;
-  padding-top: 5rem;
-  padding-bottom: 10rem;
+  padding-top: 8rem;
+  padding-bottom: 2rem;
 }
 
 .ProjectsTitle span {
@@ -78,4 +78,8 @@
 button {
   border: none;
   background-color: #ffffff;
+}
+
+button:hover {
+  cursor: pointer;
 }

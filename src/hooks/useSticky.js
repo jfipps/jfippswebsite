@@ -14,7 +14,6 @@ const useSticky = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      console.log(stickyRef.current);
       if (!stickyRef.current) {
         return;
       }

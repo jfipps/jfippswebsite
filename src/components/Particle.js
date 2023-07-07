@@ -4,7 +4,6 @@ import { loadFull } from "tsparticles";
 
 export default function Particle() {
   const particlesInit = useCallback(async (engine) => {
-    console.log(engine);
     // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
     // starting from v2 you can add only the features you need reducing the bundle size
@@ -23,7 +22,7 @@ export default function Particle() {
         options={{
           background: {
             color: {
-              value: "#252934",
+              value: "#263459",
             },
           },
           fpsLimit: 120,
@@ -51,10 +50,10 @@ export default function Particle() {
           },
           particles: {
             color: {
-              value: "#000000",
+              value: "#ffffff",
             },
             links: {
-              color: "#ffffff",
+              color: "#000000",
               distance: 75,
               enable: true,
               opacity: 0.2,

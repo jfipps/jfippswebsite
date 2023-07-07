@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useRef, useContext, useEffect } from "react";
+import { PortfolioContext } from "../context";
+import { useInView } from "react-intersection-observer";
 import ReactIcon from "../resources/reacticon.png";
 import HtmlIcon from "../resources/htmlicon.png";
 import MongoIcon from "../resources/mongoicon.png";
@@ -10,13 +12,23 @@ import NpmIcon from "../resources/npmicon.png";
 import "../css/skills.css";
 
 export default function Skills(props) {
+  const { setActiveTab } = useContext(PortfolioContext);
+  const { ref: skillsRef, inView } = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      setActiveTab("Skills");
+    }
+    console.log("Skills", inView);
+  }, [inView]);
+
   return (
     <section className="SkillsSection" id="skills">
       <div className="SkillsTitle">
         <span>Skills</span>
       </div>
       <div className="SkillRow">
-        <div className="SkillCard">
+        <div className="SkillCard" ref={skillsRef}>
           <img src={HtmlIcon} alt="html" />
           <h2>HTML</h2>
         </div>

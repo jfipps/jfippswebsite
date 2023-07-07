@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
+import { PortfolioContext } from "../context";
+import { useInView } from "react-intersection-observer";
 import Modal from "./Modal";
 import { motion } from "framer-motion";
 import { RxOpenInNewWindow } from "react-icons/rx";
@@ -7,6 +9,16 @@ import "../css/projects.css";
 export default function Projects(props) {
   const [modalOpen, setModalOpen] = useState(false);
   const [currentModal, setCurrentModal] = useState("");
+
+  const { setActiveTab } = useContext(PortfolioContext);
+  const { ref: projectRef, inView } = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      setActiveTab("Projects");
+    }
+    console.log("Projects", inView);
+  }, [inView]);
 
   const handleButtonClick = (cardName) => {
     if (!modalOpen) {
@@ -30,7 +42,7 @@ export default function Projects(props) {
         <span>Projects</span>
       </div>
       <div className="ProjectsContent">
-        <div className="ProjectCard">
+        <div className="ProjectCard" ref={projectRef}>
           <div className="ExpandIcon">
             <motion.button
               whileHover={{ scale: 1.1 }}

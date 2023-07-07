@@ -1,11 +1,6 @@
 :root {
   --background-color: #1486c3;
-  --background-text: #ced9bf;
-  --modal-background-color: #364853;
-  --modal-background-hover-color: #5b6870;
-  --modal-text: #c09576;
-  --button-background-color: #1f313d;
-  --plain-background: #ffffff;
+  --section-color: #f1f1f1;
 }
 
 /* reset */
@@ -20,15 +15,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 70%;
+  height: 100%;
   width: 100%;
-  background-color: var(--plain-background);
+  background-color: var(--section-color);
 }
 
 .SkillsTitle {
   display: flex;
   flex-direction: column;
-  height: 15%;
+  height: 25%;
   width: 100%;
   align-items: center;
   padding-top: 5rem;

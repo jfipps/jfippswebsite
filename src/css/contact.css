@@ -1,11 +1,6 @@
 :root {
-  --background-color: #252934;
-  --background-text: #ced9bf;
-  --modal-background-color: #364853;
-  --modal-background-hover-color: #5b6870;
-  --modal-text: #c09576;
-  --button-background-color: #1f313d;
-  --plain-background: #ffffff;
+  --background-color: #263459;
+  --active-color: #eb068b;
 }
 
 /* reset */
@@ -20,7 +15,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 70%;
   width: 100%;
   background-color: var(--background-color);
   color: white;
@@ -33,7 +27,7 @@
   width: 100%;
   align-items: center;
   padding-top: 5rem;
-  padding-bottom: 10rem;
+  padding-bottom: 7rem;
 }
 
 .ContactTitle span {
@@ -44,16 +38,17 @@
 .ContactContent {
   display: flex;
   flex-direction: column;
-  height: 60%;
   width: 50%;
 }
 
 .ContactForm {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 75%;
   width: 100%;
+  padding-bottom: 2rem;
 }
 
 .FormInput {
@@ -65,33 +60,73 @@
 
 .FormInput label {
   margin-top: 2rem;
+  font-weight: bold;
 }
 
 .FormInput input {
   width: 100%;
   background-color: #f5f5eb;
+  padding: 0.5rem 0 0.5rem 0;
+  outline: none;
 }
 
-.FormInput textarea {
-  resize: vertical;
-  max-height: 20rem;
-  min-height: 80px;
+.BodyInputContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+}
+
+.BodyInputContainer label {
+  margin-top: 2rem;
+  font-weight: bold;
+}
+
+.BodyInput {
   width: 100%;
+  padding-bottom: 11rem;
   background-color: #f5f5eb;
+  resize: vertical;
+  outline: none;
+}
+
+.Focused {
+  border: 1px solid var(--active-color);
+}
+
+.SubmitButton {
+  margin-top: 2rem;
+  width: 25%;
+  padding: 1rem 0 1rem 0;
+}
+
+.SubmitButton:hover {
+  cursor: pointer;
 }
 
 .ContactIcons {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   height: 20%;
   width: 100%;
+  padding-top: 2rem;
 }
 
-.Icons {
+.ContactIcons a {
+  color: white;
+  text-decoration: none;
+}
+
+.IconContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   width: 25%;
+}
+
+.ContactIcon:hover {
+  cursor: pointer;
 }

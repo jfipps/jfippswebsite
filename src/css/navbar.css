@@ -1,5 +1,11 @@
+:root {
+  --active-color: #eb068b;
+}
+
 .nav {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   height: 5%;
   width: 100%;
   background-color: black;
@@ -16,14 +22,32 @@
   list-style: none;
 }
 
+.ResumeLink {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 1rem;
+  list-style: none;
+}
+
+.ResumeLink li {
+  padding-right: 1.5rem;
+}
+
 .NavLinks li {
   padding-left: 1.5rem;
 }
 
-.nav a {
+.Inactive {
   text-decoration: none;
   font-size: 1.5rem;
   color: #fff;
+}
+
+.Active {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--active-color);
 }
 
 .sticky {
