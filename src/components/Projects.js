@@ -39,10 +39,10 @@ export default function Projects(props) {
   return (
     <section className="ProjectsSection" id="projects">
       <div className="ProjectsTitle">
-        <span>Projects</span>
+        <span ref={projectRef}>Projects</span>
       </div>
       <div className="ProjectsContent">
-        <div className="ProjectCard" ref={projectRef}>
+        <div className="ProjectCard">
           <div className="ExpandIcon">
             <motion.button
               whileHover={{ scale: 1.1 }}

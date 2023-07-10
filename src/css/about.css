@@ -1,11 +1,5 @@
 :root {
-  --card-hover-color: #263459;
-  --background-text: #ced9bf;
-  --modal-background-color: #364853;
-  --modal-background-hover-color: #5b6870;
-  --modal-text: #c09576;
-  --button-background-color: #1f313d;
-  --plain-background: #ffffff;
+  --card-hover-color: #162244;
 }
 
 /* reset */
@@ -44,8 +38,9 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-top: 5rem;
   width: 90%;
-  height: 100%;
+  height: 50%;
 }
 
 .Card {
@@ -54,7 +49,7 @@
   align-items: center;
   justify-content: center;
   width: 25%;
-  height: 50%;
+  height: 100%;
   border-top: 5px solid var(--card-hover-color);
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6);
   background: linear-gradient(to bottom, var(--card-hover-color) 50%, #fff 50%)

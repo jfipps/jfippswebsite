@@ -30,6 +30,15 @@
   padding-bottom: 20rem;
 }
 
+.HeroDesc h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.HeroDesc p {
+  font-size: 1.25rem;
+}
+
 .Bounce a {
   text-decoration: none;
   color: #fff;

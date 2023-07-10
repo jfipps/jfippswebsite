@@ -9,8 +9,8 @@ export default function Hero(props) {
       <Particle />
       <div className="HeroContent">
         <div className="HeroDesc">
-          <h1>Hello I am a web developer</h1>
-          <p>This is a big test</p>
+          <h1>Hello! I'm Jared Fipps</h1>
+          <p>I am a software developer.</p>
         </div>
         <div className="Bounce">
           <a href="#about">

@@ -1,4 +1,5 @@
 :root {
+  --navbar-color: #162244;
   --active-color: #eb068b;
 }
 
@@ -8,11 +9,12 @@
   justify-content: space-between;
   height: 5%;
   width: 100%;
-  background-color: black;
+  background-color: var(--navbar-color);
   position: sticky;
   position: -webkit-sticky;
   top: 0;
   z-index: 100;
+  border-bottom: 4px solid var(--active-color);
 }
 .NavLinks {
   display: flex;

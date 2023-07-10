@@ -34,9 +34,9 @@ export default function Contact(props) {
   return (
     <section className="ContactSection" id="contact">
       <div className="ContactTitle">
-        <span>Contact</span>
+        <span ref={contactRef}>Contact</span>
       </div>
-      <div className="ContactContent" ref={contactRef}>
+      <div className="ContactContent">
         <form onSubmit={HandleSend} className="ContactForm" id="contactform">
           <div className="FormInput">
             <label>Name</label>
