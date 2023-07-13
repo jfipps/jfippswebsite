@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, useRef } from "react";
 import { useInView } from "react-intersection-observer";
 import { PortfolioContext } from "../context";
 import { motion } from "framer-motion";
@@ -7,6 +7,9 @@ import {
   AiFillTwitterSquare,
   AiFillGithub,
 } from "react-icons/ai";
+import emailjs from "emailjs-com";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "../css/contact.css";
 
 export default function Contact(props) {
@@ -29,12 +32,37 @@ export default function Contact(props) {
   }, [inView]);
 
   const HandleSend = () => {
-    console.log(name, email, body);
+    emailjs
+      .send(
+        "service_xqqwo8l",
+        "template_jl9po6y",
+        { name: name, email: email, body: body },
+        "w9ajv_70hzBCSzULH"
+      )
+      .then(
+        function (response) {
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        function (error) {
+          console.log("FAILED...", error);
+        }
+      );
+    toast("Message sent!", {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
   };
   return (
     <section className="ContactSection" id="contact">
       <div className="ContactTitle">
-        <span ref={contactRef}>Contact</span>
+        <span>Contact</span>
+        <div id="contactnavtrigger" ref={contactRef}></div>
       </div>
       <div className="ContactContent">
         <form onSubmit={HandleSend} className="ContactForm" id="contactform">
@@ -50,12 +78,13 @@ export default function Contact(props) {
               onFocus={() => setIsNameFocus(true)}
               onBlur={() => setIsNameFocus(false)}
               className={isNameFocus ? "Focused" : "NotFocused"}
+              required
             />
           </div>
           <div className="FormInput">
             <label>Email</label>
             <input
-              type="text"
+              type="email"
               id="email"
               value={email}
               onChange={(event) => {
@@ -64,6 +93,7 @@ export default function Contact(props) {
               onFocus={() => setIsEmailFocus(true)}
               onBlur={() => setIsEmailFocus(false)}
               className={isEmailFocus ? "Focused" : "NotFocused"}
+              required
             />
           </div>
           <div className="BodyInputContainer">
@@ -80,6 +110,7 @@ export default function Contact(props) {
               className={
                 isBodyFocus ? "BodyInput Focused" : "BodyInput NotFocused"
               }
+              required
             />
           </div>
           <motion.input
@@ -93,7 +124,7 @@ export default function Contact(props) {
         </form>
       </div>
       <div className="ContactIcons">
-        <div className="IconContainer">
+        <div className="ContactIconContainer">
           <motion.a
             href="https://www.linkedin.com/in/jared-fipps/"
             whileTap={{ scale: 0.95 }}
@@ -120,6 +151,18 @@ export default function Contact(props) {
           </motion.a>
         </div>
       </div>
+      <ToastContainer
+        position="top-center"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
     </section>
   );
 }

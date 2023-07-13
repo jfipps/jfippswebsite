@@ -39,7 +39,8 @@ export default function Projects(props) {
   return (
     <section className="ProjectsSection" id="projects">
       <div className="ProjectsTitle">
-        <span ref={projectRef}>Projects</span>
+        <span>Projects</span>
+        <div id="projectnavtrigger" ref={projectRef}></div>
       </div>
       <div className="ProjectsContent">
         <div className="ProjectCard">

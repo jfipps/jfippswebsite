@@ -11,7 +11,7 @@ export default function MainContent(props) {
   console.log("isInView", inView);
   return (
     <>
-      <NavBar></NavBar>
+      {/* <NavBar></NavBar> */}
       <About></About>
       <Skills></Skills>
       <Projects></Projects>

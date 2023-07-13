@@ -1,19 +1,27 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { PortfolioContext } from "../context";
+import { FaBars } from "react-icons/fa";
 import useSticky from "../hooks/useSticky";
 import classNames from "classnames";
 import Resume from "../resources/Jared_Fipps_Resume_2023.pdf";
 import "../css/navbar.css";
 
 export default function NavBar(props) {
-  const { activeTab } = useContext(PortfolioContext);
+  const { activeTab, navState } = useContext(PortfolioContext);
   const { sticky, stickyRef } = useSticky();
+  useEffect(() => {
+    console.log(stickyRef.current.clientHeight);
+    //className={classNames("nav", { sticky })}
+  }, [activeTab]);
   return (
     <>
-      <nav ref={stickyRef} className={classNames("nav", { sticky })}>
+      <nav ref={stickyRef} className={navState ? "nav sticky" : "nav"}>
         <ul className="NavLinks">
           <li>
-            <a href="#home" className="Inactive">
+            <a
+              href="#home"
+              className={activeTab === "Hero" ? "Active" : "Inactive"}
+            >
               Home
             </a>
           </li>
@@ -55,6 +63,11 @@ export default function NavBar(props) {
             <a href={Resume} className="Inactive" download>
               Resume
             </a>
+          </li>
+          <li className="MenuButton">
+            <button>
+              <FaBars color="white" size={24}></FaBars>
+            </button>
           </li>
         </ul>
       </nav>

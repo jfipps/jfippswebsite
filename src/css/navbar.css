@@ -56,3 +56,69 @@
   position: fixed;
   top: 0;
 }
+
+.MenuButton {
+  display: none;
+}
+
+/* x-small devices */
+@media screen and (min-width: 100px) and (max-width: 575.98px) {
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 7%;
+    width: 100%;
+    background-color: var(--navbar-color);
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 4px solid var(--active-color);
+  }
+
+  .sticky {
+    position: fixed;
+    top: 0;
+  }
+
+  .Inactive {
+    display: none;
+  }
+  .NavLinks li {
+    display: none;
+  }
+  .MenuButton {
+    display: flex;
+  }
+
+  .MenuButton button {
+    border: none;
+    background: none;
+  }
+
+  .ResumeLink {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 0rem;
+    list-style: none;
+  }
+}
+
+/* small devices */
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+}
+
+/* medium devices */
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+}
+
+/* large devices */
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+/* x-large devices */
+@media screen and (min-width: 1200px) and (max-width: 1399.98px) {
+}

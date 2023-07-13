@@ -26,9 +26,10 @@ export default function Skills(props) {
     <section className="SkillsSection" id="skills">
       <div className="SkillsTitle">
         <span>Skills</span>
+        <div id="skillnavtrigger" ref={skillsRef}></div>
       </div>
       <div className="SkillRow">
-        <div className="SkillCard" ref={skillsRef}>
+        <div className="SkillCard">
           <img src={HtmlIcon} alt="html" />
           <h2>HTML</h2>
         </div>
@@ -61,6 +62,48 @@ export default function Skills(props) {
         <div className="SkillCard">
           <img src={MongoIcon} alt="mongo" />
           <h2>MongoDB</h2>
+        </div>
+      </div>
+      <div className="SkillsSmall">
+        <div className="SkillRowSmall">
+          <div className="SkillCard" ref={skillsRef}>
+            <img src={HtmlIcon} alt="html" />
+            <h2>HTML</h2>
+          </div>
+          <div className="SkillCard">
+            <img src={CssIcon} alt="css" />
+            <h2>CSS</h2>
+          </div>
+        </div>
+        <div className="SkillRowSmall">
+          <div className="SkillCard">
+            <img src={JsIcon} alt="JS" />
+            <h2>Javascript</h2>
+          </div>
+          <div className="SkillCard">
+            <img src={ReactIcon} alt="react" />
+            <h2>React</h2>
+          </div>
+        </div>
+        <div className="SkillRowSmall">
+          <div className="SkillCard">
+            <img src={NodeIcon} alt="node" />
+            <h2>NodeJS</h2>
+          </div>
+          <div className="SkillCard">
+            <img src={NpmIcon} alt="npm" />
+            <h2>NPM</h2>
+          </div>
+        </div>
+        <div className="SkillRowSmall">
+          <div className="SkillCard">
+            <img src={GitIcon} alt="git" />
+            <h2>Git</h2>
+          </div>
+          <div className="SkillCard">
+            <img src={MongoIcon} alt="mongo" />
+            <h2>MongoDB</h2>
+          </div>
         </div>
       </div>
     </section>
