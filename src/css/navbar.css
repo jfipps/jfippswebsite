@@ -61,20 +61,41 @@
   display: none;
 }
 
+.mobilenav {
+  display: none;
+}
+
 /* x-small devices */
 @media screen and (min-width: 100px) and (max-width: 575.98px) {
-  .nav {
+  .mobilenav {
+    position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     height: 7%;
     width: 100%;
     background-color: var(--navbar-color);
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
     z-index: 100;
     border-bottom: 4px solid var(--active-color);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .open {
+    height: 60%;
+  }
+
+  .MenuButtonContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 0.5rem;
+    right: 0.5rem;
+    list-style: none;
+  }
+
+  .nav {
+    display: none;
   }
 
   .sticky {
@@ -97,22 +118,188 @@
     background: none;
   }
 
-  .ResumeLink {
+  .MobileLinksContainer {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    padding-right: 0rem;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    padding: 3rem 0 1rem 0;
+    opacity: 1;
+    transition: opacity 1s;
+  }
+
+  .Closed {
+    opacity: 0;
+  }
+
+  .MobileLinksContainer li {
     list-style: none;
+    padding-bottom: 2rem;
+  }
+
+  .MobileLinksContainer a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #fff;
   }
 }
 
 /* small devices */
 @media screen and (min-width: 576px) and (max-width: 767.98px) {
+  .mobilenav {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 7%;
+    width: 100%;
+    background-color: var(--navbar-color);
+    z-index: 100;
+    border-bottom: 4px solid var(--active-color);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .open {
+    height: 60%;
+  }
+
+  .MenuButtonContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 0.5rem;
+    right: 0.5rem;
+    list-style: none;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .sticky {
+    position: fixed;
+    top: 0;
+  }
+
+  .Inactive {
+    display: none;
+  }
+  .NavLinks li {
+    display: none;
+  }
+  .MenuButton {
+    display: flex;
+  }
+
+  .MenuButton button {
+    border: none;
+    background: none;
+  }
+
+  .MobileLinksContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    padding: 3rem 0 1rem 0;
+    opacity: 1;
+    transition: opacity 1s;
+  }
+
+  .Closed {
+    opacity: 0;
+  }
+
+  .MobileLinksContainer li {
+    list-style: none;
+    padding-bottom: 2rem;
+  }
+
+  .MobileLinksContainer a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #fff;
+  }
 }
 
 /* medium devices */
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .mobilenav {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 7%;
+    width: 100%;
+    background-color: var(--navbar-color);
+    z-index: 100;
+    border-bottom: 4px solid var(--active-color);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .open {
+    height: 60%;
+  }
+
+  .MenuButtonContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 0.5rem;
+    right: 0.5rem;
+    list-style: none;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .sticky {
+    position: fixed;
+    top: 0;
+  }
+
+  .Inactive {
+    display: none;
+  }
+  .NavLinks li {
+    display: none;
+  }
+  .MenuButton {
+    display: flex;
+  }
+
+  .MenuButton button {
+    border: none;
+    background: none;
+  }
+
+  .MobileLinksContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    padding: 3rem 0 1rem 0;
+    opacity: 1;
+    transition: opacity 1s;
+  }
+
+  .Closed {
+    opacity: 0;
+  }
+
+  .MobileLinksContainer li {
+    list-style: none;
+    padding-bottom: 2rem;
+  }
+
+  .MobileLinksContainer a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #fff;
+  }
 }
 
 /* large devices */

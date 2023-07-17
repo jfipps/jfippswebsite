@@ -25,8 +25,8 @@ export default function Skills(props) {
   return (
     <section className="SkillsSection" id="skills">
       <div className="SkillsTitle">
-        <span>Skills</span>
         <div id="skillnavtrigger" ref={skillsRef}></div>
+        <span>Skills</span>
       </div>
       <div className="SkillRow">
         <div className="SkillCard">

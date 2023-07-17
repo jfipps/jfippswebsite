@@ -101,6 +101,11 @@
 #aboutnavtrigger {
   position: absolute;
   bottom: 3rem;
+  position: absolute;
+  top: 15rem;
+  height: 10px;
+  width: 100px;
+  border: 1px solid blue;
 }
 
 /* x-small devices */
@@ -166,10 +171,124 @@
 
 /* small devices */
 @media screen and (min-width: 576px) and (max-width: 767.98px) {
+  .AboutSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: var(--plain-background);
+  }
+  .AboutCards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5rem;
+    width: 90%;
+    height: auto;
+  }
+
+  .Card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    height: auto;
+    border-top: 5px solid var(--alt-card-hover-color);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6);
+    background: none;
+    background-size: 100%;
+    transition: none;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .Card:nth-child(odd) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    height: auto;
+    border-top: 5px solid var(--card-hover-color);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6);
+    background: none;
+    background-size: 100%;
+    transition: none;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .IconContainer {
+    display: none;
+  }
+
+  .Card:hover {
+    color: black;
+  }
 }
 
 /* medium devices */
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .AboutSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: var(--plain-background);
+  }
+  .AboutCards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5rem;
+    width: 90%;
+    height: auto;
+  }
+
+  .Card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    height: auto;
+    border-top: 5px solid var(--alt-card-hover-color);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6);
+    background: none;
+    background-size: 100%;
+    transition: none;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .Card:nth-child(odd) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    height: auto;
+    border-top: 5px solid var(--card-hover-color);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6);
+    background: none;
+    background-size: 100%;
+    transition: none;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .IconContainer {
+    display: none;
+  }
+
+  .Card:hover {
+    color: black;
+  }
 }
 
 /* large devices */

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { PortfolioContext } from "../context";
 import { FaBars } from "react-icons/fa";
 import useSticky from "../hooks/useSticky";
@@ -8,14 +8,16 @@ import "../css/navbar.css";
 
 export default function NavBar(props) {
   const { activeTab, navState } = useContext(PortfolioContext);
-  const { sticky, stickyRef } = useSticky();
+
+  const [navOpen, setNavOpen] = useState(false);
+
   useEffect(() => {
-    console.log(stickyRef.current.clientHeight);
-    //className={classNames("nav", { sticky })}
-  }, [activeTab]);
+    console.log(navOpen);
+  }, [navOpen]);
+
   return (
     <>
-      <nav ref={stickyRef} className={navState ? "nav sticky" : "nav"}>
+      <nav className={navState ? "nav sticky" : "nav"}>
         <ul className="NavLinks">
           <li>
             <a
@@ -71,9 +73,34 @@ export default function NavBar(props) {
           </li>
         </ul>
       </nav>
-      {sticky && (
-        <div style={{ height: `${stickyRef.current?.clientHeight}px` }}></div>
-      )}
+      <nav className={navOpen ? "open mobilenav sticky" : "mobilenav sticky"}>
+        <ul className="MenuButtonContainer">
+          <li className="MenuButton">
+            <button onClick={() => setNavOpen(!navOpen)}>
+              <FaBars color="white" size={24}></FaBars>
+            </button>
+          </li>
+        </ul>
+        <div className={navOpen ? "MobileLinksContainer" : "Closed"}>
+          <ul className="MobileLinks">
+            <li onClick={() => setNavOpen(false)}>
+              <a href="#home">Home</a>
+            </li>
+            <li onClick={() => setNavOpen(false)}>
+              <a href="#about">About</a>
+            </li>
+            <li onClick={() => setNavOpen(false)}>
+              <a href="#skills">Skills</a>
+            </li>
+            <li onClick={() => setNavOpen(false)}>
+              <a href="#projects">Projects</a>
+            </li>
+            <li onClick={() => setNavOpen(false)}>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </>
   );
 }

@@ -118,7 +118,7 @@
   height: 20%;
   width: 100%;
   padding-top: 2rem;
-  padding-bottom: 5rem;
+  padding-bottom: 4rem;
 }
 
 .ContactIcons a {
@@ -144,14 +144,146 @@
 
 /* x-small devices */
 @media screen and (min-width: 100px) and (max-width: 575.98px) {
+  .ContactContent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .ContactTitle {
+    padding-bottom: 1rem;
+  }
+
+  .FormInput {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+  }
+
+  .BodyInputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+  }
+
+  .BodyInput {
+    width: 100%;
+    min-height: 10rem;
+    padding: 0.5rem 0 0.5rem 0;
+    background-color: #f5f5eb;
+    resize: vertical;
+    outline: none;
+  }
+
+  .SubmitButton {
+    margin-top: 2rem;
+    width: 50%;
+    padding: 1rem 0 1rem 0;
+  }
+  .ContactIconContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
 }
 
 /* small devices */
 @media screen and (min-width: 576px) and (max-width: 767.98px) {
+  .ContactContent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .ContactTitle {
+    padding-bottom: 1rem;
+  }
+
+  .FormInput {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+  }
+
+  .BodyInputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+  }
+
+  .BodyInput {
+    width: 100%;
+    min-height: 10rem;
+    padding: 0.5rem 0 0.5rem 0;
+    background-color: #f5f5eb;
+    resize: vertical;
+    outline: none;
+  }
+
+  .SubmitButton {
+    margin-top: 2rem;
+    width: 50%;
+    padding: 1rem 0 1rem 0;
+  }
+  .ContactIconContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
 }
 
 /* medium devices */
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .ContactContent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .ContactTitle {
+    padding-bottom: 1rem;
+  }
+
+  .FormInput {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+  }
+
+  .BodyInputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+  }
+
+  .BodyInput {
+    width: 100%;
+    min-height: 10rem;
+    padding: 0.5rem 0 0.5rem 0;
+    background-color: #f5f5eb;
+    resize: vertical;
+    outline: none;
+  }
+
+  .SubmitButton {
+    margin-top: 2rem;
+    width: 50%;
+    padding: 1rem 0 1rem 0;
+  }
+  .ContactIconContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
 }
 
 /* large devices */
