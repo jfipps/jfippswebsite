@@ -98,6 +98,11 @@ export default function NavBar(props) {
             <li onClick={() => setNavOpen(false)}>
               <a href="#contact">Contact</a>
             </li>
+            <li onClick={() => setNavOpen(false)}>
+              <a href={Resume} download>
+                Resume
+              </a>
+            </li>
           </ul>
         </div>
       </nav>

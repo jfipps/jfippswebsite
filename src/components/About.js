@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import NavBar from "./NavBar";
 import { useInView } from "react-intersection-observer";
 import { PortfolioContext } from "../context";
@@ -7,15 +7,25 @@ import { FaTasks } from "react-icons/fa";
 import "../css/about.css";
 
 export default function About() {
-  const { setActiveTab, setNavState } = useContext(PortfolioContext);
-  const { ref: aboutRef, inView } = useInView();
+  const { setActiveTab, setNavState, navState } = useContext(PortfolioContext);
+
+  const [aboutRef, inView] = useInView();
+  const [navRef, newInView] = useInView();
 
   useEffect(() => {
     if (inView) {
       setActiveTab("About");
-      setNavState(true);
+      console.log(newInView);
     }
   }, [inView]);
+
+  useEffect(() => {
+    if (newInView) {
+      setNavState(true);
+      console.log("navState: ", navState);
+    }
+  }, [newInView]);
+
   return (
     <>
       <section className="AboutSection" id="about">
@@ -63,6 +73,7 @@ export default function About() {
           </div>
         </div>
         <div id="aboutnavtrigger" ref={aboutRef}></div>
+        <div id="stickynavtrigger" ref={navRef}></div>
       </section>
     </>
   );

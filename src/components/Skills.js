@@ -66,7 +66,7 @@ export default function Skills(props) {
       </div>
       <div className="SkillsSmall">
         <div className="SkillRowSmall">
-          <div className="SkillCard" ref={skillsRef}>
+          <div className="SkillCard">
             <img src={HtmlIcon} alt="html" />
             <h2>HTML</h2>
           </div>

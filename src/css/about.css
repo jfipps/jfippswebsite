@@ -105,7 +105,14 @@
   top: 15rem;
   height: 10px;
   width: 100px;
-  border: 1px solid blue;
+}
+
+#stickynavtrigger {
+  position: absolute;
+  bottom: 3rem;
+  position: absolute;
+  height: 10px;
+  width: 100px;
 }
 
 /* x-small devices */
