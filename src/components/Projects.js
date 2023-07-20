@@ -4,6 +4,8 @@ import { useInView } from "react-intersection-observer";
 import Modal from "./Modal";
 import { motion } from "framer-motion";
 import { RxOpenInNewWindow } from "react-icons/rx";
+import { BsSpotify } from "react-icons/bs";
+import { MdQuiz } from "react-icons/md";
 import "../css/projects.css";
 
 export default function Projects(props) {
@@ -53,15 +55,12 @@ export default function Projects(props) {
               <RxOpenInNewWindow size={28}></RxOpenInNewWindow>
             </motion.button>
           </div>
-          <h2 className="ProjectCardHeader">Spoofy</h2>
-          <p>
-            Spoofy is a web application that allows a user to track their
-            listening habits on their Spotify account. It also acts as a web
-            player the user can use while looking at their recent listening
-            trends. The application utilizes a React front end with an
-            Express/NodeJS back end. The Spotify API is used to pull the user
-            data.
-          </p>
+          <div className="ProjectCardContents">
+            <a href="https://jfippsspoofy.herokuapp.com/" target="_blank">
+              <h2 className="ProjectCardHeader">Spoofy</h2>
+            </a>
+            <h4>Track your Spotify listening habits!</h4>
+          </div>
         </div>
         <div className="ProjectCard">
           <div className="ExpandIcon">
@@ -75,16 +74,12 @@ export default function Projects(props) {
               </motion.button>
             </a>
           </div>
-          <h2 className="ProjectCardHeader">Quizmo</h2>
-          <p>
-            Spoofy is a web application in which a user can take multiple choice
-            quizzes based on a wide range of topics and difficulties. The user's
-            scores are then recorded and can be compared to other users on the
-            high scores section of the app. The application utilizes a React
-            front end with an Express/NodeJS backend. MongoDB is used to store
-            the user logins and scores. The Trivia API is used to pull the quiz
-            questions.
-          </p>
+          <div className="ProjectCardContents">
+            <a href="https://quizmo.herokuapp.com/" target="_blank">
+              <h2 className="ProjectCardHeader">Quizmo</h2>
+            </a>
+            <h4>Take quizzes and compete with the world!</h4>
+          </div>
         </div>
       </div>
       {modalOpen && (

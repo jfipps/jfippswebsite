@@ -1,5 +1,5 @@
 :root {
-  --background-color: #1486c3;
+  --background-color: #162244;
   --background-text: #ced9bf;
   --modal-background-color: #364853;
   --modal-background-hover-color: #5b6870;
@@ -55,6 +55,7 @@
   position: relative;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 35%;
   height: 50%;
   border-top: 5px solid var(--background-color);
@@ -62,11 +63,21 @@
   overflow: hidden;
 }
 
-.ProjectCard p {
-  padding-top: 1rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
-  line-height: 150%;
+.ProjectCardContents {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 80%;
+}
+
+.ProjectCardContents h2 {
+  font-size: 3rem;
+}
+
+.ProjectCardContents h4 {
+  font-size: 1.5rem;
 }
 
 .ExpandIcon {
@@ -129,11 +140,11 @@ button:hover {
   }
 
   .ProjectCardHeader {
-    padding-top: 1.5rem;
+    padding-top: 4.5rem;
   }
 
-  .ProjectCard p {
-    padding: 1rem 0 1rem 0;
+  .ProjectCardContents h4 {
+    padding: 1rem 0 4.5rem 0;
     width: 90%;
     line-height: 150%;
   }
@@ -182,11 +193,11 @@ button:hover {
   }
 
   .ProjectCardHeader {
-    padding-top: 1.5rem;
+    padding-top: 4.5rem;
   }
 
-  .ProjectCard p {
-    padding: 1rem 0 1rem 0;
+  .ProjectCardContents h4 {
+    padding: 1rem 0 4.5rem 0;
     width: 90%;
     line-height: 150%;
   }
@@ -235,11 +246,11 @@ button:hover {
   }
 
   .ProjectCardHeader {
-    padding-top: 1.5rem;
+    padding-top: 4.5rem;
   }
 
-  .ProjectCard p {
-    padding: 1rem 0 1rem 0;
+  .ProjectCardContents h4 {
+    padding: 1rem 0 4.5rem 0;
     width: 90%;
     line-height: 150%;
   }

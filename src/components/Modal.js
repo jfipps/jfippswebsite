@@ -34,6 +34,10 @@ export default function Modal({ handleClose, openedModal }) {
 
   const QuizmoImages = [Quizmo1, Quizmo2, Quizmo3];
 
+  const SpoofyLink = "https://jfippsspoofy.herokuapp.com/";
+
+  const QuizmoLink = "https://quizmo.herokuapp.com/";
+
   const SpoofyDesc =
     "Spoofy is a web application that allows a user to track their listening habits on their Spotify account. It also acts as a web player the user can use while looking at their recent listening trends. The application utilizes a React front end with an Express/NodeJS back end. The Spotify API is used to pull the user data.";
 
@@ -70,7 +74,12 @@ export default function Modal({ handleClose, openedModal }) {
         >
           <RiCloseFill className="ModalIcon" size={32}></RiCloseFill>
         </motion.button>
-        <h2>{openedModal}</h2>
+        <a
+          href={openedModal === "Spoofy" ? SpoofyLink : QuizmoLink}
+          target="_blank"
+        >
+          <h2>{openedModal}</h2>
+        </a>
         <p>{openedModal === "Spoofy" ? SpoofyDesc : QuizmoDesc}</p>
         <div className="CarouselNav">
           <motion.button
